@@ -1,0 +1,16 @@
+body {
+	background-image: url(background.jpeg);
+	background-size: cover;
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	height: 100vh; 
+	margin: 0; 
+}
+
+iframe{
+	width: 60vw;
+	height: 40vh;
+	border: none;
+	background-color: transparent;
+	}
