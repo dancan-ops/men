@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
 	<meta charset="utf-8">
@@ -15,3 +16,75 @@
 
 </body>
 </html>
+=======
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDance</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            
+            transition: filter 0.5s ease;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: -1;
+            transition: filter 0.5s ease;
+        }
+
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(0px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+
+ 
+        body.hovered .background {
+            filter: blur(8px);
+        }
+    </style>
+</head>
+<body onmouseenter="changeIframe()" onmouseleave="resetPage()">
+    <div class="background"></div> <!-- Background layer to blur -->
+    
+    <div class="container">
+        <iframe id="myIframe" src="intro.html"></iframe>
+    </div>
+
+   <script>
+        let defaultIframeSrc = "intro.html"; // Store the default iframe content
+
+        function changeIframe() {
+            document.body.classList.add("hovered"); // Apply blur to background
+            document.getElementById("myIframe").src = "https://www.wikipedia.org"; // Change iframe content
+        }
+
+        function resetPage() {
+            document.body.classList.remove("hovered"); // Remove blur from background
+            document.getElementById("myIframe").src = defaultIframeSrc; // Reset iframe content
+        }
+    </script>
+</body>
+</html>
+>>>>>>> a8ef98d (Initial commit)
